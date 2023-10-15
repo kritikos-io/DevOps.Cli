@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <ToolCommandName>devops</ToolCommandName>
+    <TargetFramework>net7.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Kritikos.Extensions.Version.DependencyInjection" />
+    <PackageReference Include="Kritikos.SpectreCli.Infrastructure" />
+    <PackageReference Include="Microsoft.TeamFoundation.DistributedTask.WebApi" />
+    <PackageReference Include="Microsoft.TeamFoundationServer.Client" />
+    <PackageReference Include="Refit.HttpClientFactory" />
+    <PackageReference Include="Spectre.Console.Cli" />
+    <PackageReference Include="Spectre.Console.ImageSharp" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DevOps.Api\DevOps.Api.csproj" />
+    <ProjectReference Include="..\DevOps.Services\DevOps.Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup Label="ImplicitUsings">
+    <Using Include="Spectre.Console.Cli" />
+  </ItemGroup>
+
+</Project>
